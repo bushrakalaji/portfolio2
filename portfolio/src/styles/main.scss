@@ -1,0 +1,45 @@
+@import "./style.scss";
+
+body {
+  background-color: #53258e;
+  background-image: linear-gradient(62deg, #24103e 0%, #53258e 100%);
+  font-family: "input-mono", monospace !important;
+}
+
+.myshadow {
+  filter: drop-shadow(0 0 10px #24103e);
+}
+
+.hello {
+  font-family: "blithe";
+}
+
+.lineHover {
+  position: relative;
+  display: inline-block;
+}
+
+.lineHover::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffffff; /* Adjust to desired color */
+  transition: width 0.3s ease-in-out;
+  transform: translateY(-50%);
+}
+
+.lineHover:hover::after {
+  width: 100%;
+}
+
+.myHeight {
+  height: 90vh;
+}
+
+.about {
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #53258e 0%, #e0c3fc 100%);
+}
