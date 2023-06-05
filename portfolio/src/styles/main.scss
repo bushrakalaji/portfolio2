@@ -2,12 +2,16 @@
 
 body {
   background-color: #53258e;
-  background-image: linear-gradient(62deg, #24103e 0%, #53258e 100%);
+  background-image: linear-gradient(62deg, #24103e 60%, #53258e 40%);
   font-family: "input-mono", monospace !important;
 }
 
 .myshadow {
   filter: drop-shadow(0 0 10px #24103e);
+}
+
+.cntctShadow {
+  filter: drop-shadow(0 0 10px #53258e);
 }
 
 .hello {
@@ -38,8 +42,16 @@ body {
 .myHeight {
   height: 90vh;
 }
+.myHeght {
+  height: 95vh;
+}
 
 .about {
   background-color: #8ec5fc;
   background-image: linear-gradient(62deg, #53258e 0%, #e0c3fc 100%);
+}
+
+.arrow,
+.linkHover:hover {
+  color: #e0c3fc;
 }
