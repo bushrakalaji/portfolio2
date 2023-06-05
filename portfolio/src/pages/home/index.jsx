@@ -5,7 +5,7 @@ import AboutMe from "../../component/aboutMe";
 function HomePage() {
   return (
     <div className="text-white">
-      <div className="d-flex flex-wrap   justify-content-around align-items-center  gap-2 myHeight">
+      <div className="d-flex flex-wrap  justify-content-around align-items-center gap-2 myHeight">
         <div>
           <div className="d-flex flex-column">
             <h1 className="hello  fs-1"> My Portfolio</h1>
