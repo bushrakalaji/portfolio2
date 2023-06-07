@@ -2,7 +2,7 @@
 
 body {
   background-color: #53258e;
-  background-image: linear-gradient(62deg, #24103e 60%, #53258e 40%);
+  background-image: linear-gradient(62deg, #24103e 65%, #53258e 40%);
   font-family: "input-mono", monospace !important;
 }
 
@@ -40,10 +40,7 @@ body {
 }
 
 .myHeight {
-  height: 90vh;
-}
-.myHeght {
-  height: 95vh;
+  height: 85vh;
 }
 
 .about {
@@ -54,4 +51,13 @@ body {
 .arrow,
 .linkHover:hover {
   color: #e0c3fc;
+}
+
+.glass {
+  background: rgba(36, 16, 62, 0.56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(36, 16, 62, 0.3);
 }
