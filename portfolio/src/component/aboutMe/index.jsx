@@ -1,4 +1,6 @@
 import React from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import html from "../../images/html.png";
@@ -12,10 +14,21 @@ import sass from "../../images/sass.png";
 import xd from "../../images/xd.png";
 
 function AboutMe() {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["end end", "end start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [1, 0], [0, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
   return (
-    <div
+    <motion.div
       className="min-vh-100 d-flex justify-content-center align-items-center"
       id="about"
+      style={{ scale, opacity }}
+      ref={targetRef}
     >
       <Row className="my-5 gap-5">
         {" "}
@@ -64,7 +77,7 @@ function AboutMe() {
           </div>
         </Col>
       </Row>
-    </div>
+    </motion.div>
   );
 }
 

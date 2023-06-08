@@ -12,7 +12,7 @@ function Section({ children }) {
         style={{
           transform: isInView ? "translateX(0)" : "translateX(-100px)",
           opacity: isInView ? 1 : 0,
-          transition: "all 0.5s ease-in-out 0.2s",
+          transition: "all 0.5s ease-in-out 0.6s",
         }}
       >
         {children}

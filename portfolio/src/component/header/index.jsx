@@ -5,11 +5,14 @@ import Navbar from "react-bootstrap/Navbar";
 
 function Header() {
   return (
-    <Navbar expand="md" className="sticky-top ">
+    <Navbar expand="md sticky-top  glass p-1 rounded-0">
       <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="ms-auto" />
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="ms-auto bg-warning"
+        />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="m-auto glass px-3">
+          <Nav className="m-auto  px-3">
             <Nav.Link href="#projects" className="text-white">
               Projects
             </Nav.Link>
