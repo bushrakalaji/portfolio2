@@ -3,7 +3,7 @@ import { LayoutGroup, motion, useScroll, useTransform } from "framer-motion";
 import Card from "../card";
 
 const url =
-  "http://api.bushrakalaji.com/wp-json/wp/v2/card?acf_format=standard&_fields=title,acf";
+  "https://api.bushrakalaji.com/wp-json/wp/v2/card?acf_format=standard&_fields=title,acf";
 
 function Cards() {
   const [cards, setCard] = useState([]);
