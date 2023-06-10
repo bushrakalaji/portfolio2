@@ -12,6 +12,8 @@ import git from "../../images/git.png";
 import github from "../../images/github.png";
 import sass from "../../images/sass.png";
 import xd from "../../images/xd.png";
+import vs from "../../images/vs.png";
+import framer from "../../images/framer.webp";
 
 function AboutMe() {
   const targetRef = useRef(null);
@@ -30,11 +32,11 @@ function AboutMe() {
       ref={targetRef}
       transition={{ delay: 2, duration: 3 }}
     >
-      <Row className="my-5 gap-5">
+      <Row className="my-5 gap-5 align-items-start d-flex">
         {" "}
         <Col lg xl={7}>
-          <h2 className="hello fs-1 text-center mb-5">About Me</h2>
-          <div className="d-flex flex-column gap-3 fs-5 glass p-5 ">
+          <h2 className="hello fs-1 text-center mb-3">About Me</h2>
+          <div className="d-flex flex-column gap-3 fs-5 glass px-5 ">
             <p>
               I'm a passionate front-end developer originally from Syria, now
               living near Oslo, Norway. At 27 years old, I've dedicated myself
@@ -61,19 +63,54 @@ function AboutMe() {
         </Col>{" "}
         <Col md>
           {" "}
-          <h2 className="hello fs-1  my-5 text-center">
+          <h2 className="hello fs-1  mb-3 text-center">
             Technologies and Tools
           </h2>
           <div className="d-flex gap-3 justify-content-center p-3 about rounded flex-wrap">
-            <img src={html} alt="" style={{ maxWidth: "80px" }} />
-            <img src={css} alt="" style={{ maxWidth: "80px" }} />
-            <img src={js} alt="" style={{ maxWidth: "80px" }} />{" "}
-            <img src={bootstrap} alt="" style={{ maxWidth: "80px" }} />{" "}
-            <img src={sass} alt="" style={{ maxWidth: "80px" }} />{" "}
-            <img src={react} alt="" style={{ maxWidth: "80px" }} />{" "}
-            <img src={xd} alt="" style={{ maxWidth: "80px" }} />
-            <img src={git} alt="" style={{ maxWidth: "80px" }} />
-            <img src={github} alt="" style={{ maxWidth: "80px" }} />
+            <div className="d-flex flex-column  align-items-center gap-2">
+              <img src={html} alt="" style={{ maxWidth: "80px" }} />
+              <span>HTML</span>
+            </div>
+            <div className="d-flex flex-column  align-items-center gap-2">
+              <img src={css} alt="" style={{ maxWidth: "80px" }} />
+              <span>CSS</span>
+            </div>
+            <div className="d-flex flex-column  align-items-center gap-2">
+              <img src={js} alt="" style={{ maxWidth: "80px" }} />
+              <span>JavaScript</span>
+            </div>
+            <div className="d-flex flex-column  align-items-center gap-2">
+              <img src={bootstrap} alt="" style={{ maxWidth: "80px" }} />
+              <span>Bootstrap</span>
+            </div>
+            <div className="d-flex flex-column  align-items-center gap-2">
+              <img src={sass} alt="" style={{ maxWidth: "80px" }} />
+              <span>SCSS</span>
+            </div>
+            <div className="d-flex flex-column  align-items-center gap-2">
+              <img src={react} alt="" style={{ maxWidth: "80px" }} />
+              <span>React.js</span>
+            </div>
+            <div className="d-flex flex-column  align-items-center gap-2">
+              <img src={xd} alt="" style={{ maxWidth: "80px" }} />
+              <span>Adobe XD</span>
+            </div>
+            <div className="d-flex flex-column  align-items-center gap-2">
+              <img src={git} alt="" style={{ maxWidth: "80px" }} />
+              <span>Git</span>
+            </div>
+            <div className="d-flex flex-column  align-items-center gap-2">
+              <img src={github} alt="" style={{ maxWidth: "80px" }} />
+              <span>Github</span>
+            </div>
+            <div className="d-flex flex-column  align-items-center gap-2">
+              <img src={vs} alt="" style={{ maxWidth: "80px" }} />
+              <span>VSCode</span>
+            </div>
+            <div className="d-flex flex-column  align-items-center gap-2">
+              <img src={framer} alt="" style={{ maxWidth: "80px" }} />
+              <span>Framer Motion</span>
+            </div>{" "}
           </div>
         </Col>
       </Row>

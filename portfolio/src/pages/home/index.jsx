@@ -3,9 +3,10 @@ import bisho from "../../images/memoji.png";
 import AboutMe from "../../component/aboutMe";
 import Contact from "../../component/contact";
 import Section from "../../component/motion/useInView";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import Arrow from "../../component/arrow";
+import Cards from "../../component/cards";
 
 function HomePage() {
   const targetRef = useRef(null);
@@ -58,18 +59,19 @@ function HomePage() {
             />
           </div>
         </motion.div>
-        <Arrow href={"#about"} />
       </Section>
 
       <Section className="position-relative m-5">
         <span id="about"></span>
         <AboutMe />
-        <Arrow href={"#contact"} />
+      </Section>
+      <Section className="position-relative">
+        <span id="projects"></span>
+        <Cards />
       </Section>
       <Section className="position-relative">
         <span id="contact"></span>
         <Contact />
-        <Arrow href={"#about"} />
       </Section>
     </div>
   );

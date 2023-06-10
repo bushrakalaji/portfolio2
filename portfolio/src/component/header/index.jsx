@@ -13,11 +13,11 @@ function Header() {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto  px-3">
-            <Nav.Link href="#projects" className="text-white">
-              Projects
-            </Nav.Link>
             <Nav.Link href="#about" className=" text-white">
               About
+            </Nav.Link>
+            <Nav.Link href="#projects" className="text-white">
+              Projects
             </Nav.Link>
             <Nav.Link href="#contact" className=" text-white">
               Contect
