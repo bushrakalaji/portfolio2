@@ -1,24 +1,45 @@
 import React, { useEffect, useState, useRef } from "react";
 import { LayoutGroup, motion, useScroll, useTransform } from "framer-motion";
 import Card from "../card";
+import Spinner from "react-bootstrap/Spinner";
 
 const url =
   "https://api.bushrakalaji.com/wp-json/wp/v2/card?acf_format=standard&_fields=title,acf";
 
 function Cards() {
   const [cards, setCard] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
   // The useEffect will run once when the component first mounts
   useEffect(() => {
-    // Function that gets our posts
+    setHasError(false);
+    setIsLoading(true);
+
     async function getData() {
-      const response = await fetch(url);
-      const json = await response.json();
-      // Setting our `posts` state to the API data we received
-      setCard(json);
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        // Setting our `posts` state to the API data we received
+        setCard(json);
+        setIsLoading(false);
+      } catch (error) {
+        setIsLoading(false);
+        setHasError(true);
+      }
     }
     getData();
   }, []);
+
+  if (isLoading) {
+    <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>;
+  }
+
+  if (hasError) {
+    <dir>Oops! Something went wrong.</dir>;
+  }
 
   console.log(cards);
 
