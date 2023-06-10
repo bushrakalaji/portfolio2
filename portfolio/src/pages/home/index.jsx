@@ -3,7 +3,7 @@ import bisho from "../../images/memoji.png";
 import AboutMe from "../../component/aboutMe";
 import Contact from "../../component/contact";
 import Section from "../../component/motion/useInView";
-import { easeInOut, motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Arrow from "../../component/arrow";
 
