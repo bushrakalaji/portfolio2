@@ -3,8 +3,9 @@ import bisho from "../../images/memoji.png";
 import AboutMe from "../../component/aboutMe";
 import Contact from "../../component/contact";
 import Section from "../../component/motion/useInView";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { easeInOut, motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Arrow from "../../component/arrow";
 
 function HomePage() {
   const targetRef = useRef(null);
@@ -13,14 +14,14 @@ function HomePage() {
     offset: ["end end", "end start"],
   });
 
-  const scale = useTransform(scrollYProgress, [1, 0], [0, 1]);
+  const scale = useTransform(scrollYProgress, [1, 0], [0.5, 1]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
     <div className="text-white">
-      <Section>
+      <Section className="position-relative">
         <motion.div
-          className="d-flex flex-wrap justify-content-around align-items-center gap-2 min-vh-100"
+          className="d-flex flex-wrap justify-content-around align-items-center gap-2 myHeight mb-5"
           style={{ scale, opacity }}
           ref={targetRef}
         >
@@ -29,12 +30,23 @@ function HomePage() {
               <h1 className="hello fs-1">My Portfolio</h1>
               <span className="fs-2">Bushra kalaji</span>
               <span className="fs-1">Front-End Developer</span>
-              <a
+              <motion.a
                 className="btn btn-outline-secondary fs-3 text-white mt-3"
                 href="mailto:bkalaji@hotmail.com"
+                initial={{}}
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    duration: 0.5,
+                  },
+                  textShadow: "0px 0px 10px rgb(255,255,255)",
+                  boxShadow: "0px 0px 10px rgb(255,255,255)",
+                }}
               >
                 <i className="bi bi-envelope"></i> Contact me
-              </a>
+              </motion.a>
             </div>
           </motion.div>
           <div className="hi">
@@ -46,18 +58,18 @@ function HomePage() {
             />
           </div>
         </motion.div>
+        <Arrow href={"#about"} />
       </Section>
-      <div className="fs-2 text-center">
-        <a href="#about" className="arrow">
-          <i className="bi bi-arrow-down-circle"></i>
-        </a>
-      </div>
 
-      <Section>
+      <Section className="position-relative m-5">
+        <span id="about"></span>
         <AboutMe />
+        <Arrow href={"#contact"} />
       </Section>
-      <Section>
+      <Section className="position-relative">
+        <span id="contact"></span>
         <Contact />
+        <Arrow href={"#about"} />
       </Section>
     </div>
   );

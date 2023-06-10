@@ -20,15 +20,15 @@ function AboutMe() {
     offset: ["end end", "end start"],
   });
 
-  const scale = useTransform(scrollYProgress, [1, 0], [0, 1]);
+  const scale = useTransform(scrollYProgress, [1, 0], [0.5, 1]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
     <motion.div
       className="min-vh-100 d-flex justify-content-center align-items-center"
-      id="about"
       style={{ scale, opacity }}
       ref={targetRef}
+      transition={{ delay: 2, duration: 3 }}
     >
       <Row className="my-5 gap-5">
         {" "}

@@ -10,7 +10,7 @@ function Section({ children }) {
     <section ref={ref}>
       <div
         style={{
-          transform: isInView ? "translateX(0)" : "translateX(-100px)",
+          transform: isInView ? "translateX(0)" : "translateX(-900px)",
           opacity: isInView ? 1 : 0,
           transition: "all 0.5s ease-in-out 0.6s",
         }}
