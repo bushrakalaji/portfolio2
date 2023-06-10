@@ -46,7 +46,6 @@ function Card({ card: { acf } }) {
             whileHover={{
               scale: 1.1,
               transition: {
-                delay: 0.3,
                 duration: 0.5,
                 ease: "easeInOut",
               },
