@@ -20,7 +20,7 @@ function Cards() {
       try {
         const response = await fetch(url);
         const json = await response.json();
-        // Setting our `posts` state to the API data we received
+
         setCard(json);
         setIsLoading(false);
       } catch (error) {
