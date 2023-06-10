@@ -36,7 +36,7 @@ function AboutMe() {
         {" "}
         <Col lg xl={7}>
           <h2 className="hello fs-1 text-center mb-3">About Me</h2>
-          <div className="d-flex flex-column gap-3 fs-5 glass px-5 ">
+          <div className="d-flex flex-column gap-3 fs-5 glass p-5 ">
             <p>
               I'm a passionate front-end developer originally from Syria, now
               living near Oslo, Norway. At 27 years old, I've dedicated myself
