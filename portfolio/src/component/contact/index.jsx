@@ -44,7 +44,7 @@ function Contact() {
             <i className="bi bi-tiktok linkHover"></i>
           </a>
           <a
-            href="https://instagram.com/bushra_kalaji?igshid=OGQ5ZDc2ODk2ZA=="
+            href="https://instagram.com/bushra_kalaji"
             className=" text-white fs-1 "
           >
             <i className="bi bi-instagram linkHover"></i>
