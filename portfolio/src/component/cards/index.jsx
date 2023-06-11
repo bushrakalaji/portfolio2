@@ -37,7 +37,7 @@ function Cards() {
 
   return (
     <motion.div className="min-vh-100 d-flex flex-column align-items-center align-content-center">
-      <h2 className="hello mt-5">My Projects</h2>
+      <h2 className="hello mt-5 fs-1">My Projects</h2>
       <LayoutGroup>
         <motion.div className="d-flex justify-content-center align-items-start gap-3 flex-wrap flex-30">
           {cards.map((card) => (
