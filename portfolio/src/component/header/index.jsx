@@ -5,7 +5,13 @@ import Navbar from "react-bootstrap/Navbar";
 
 function Header() {
   return (
-    <Navbar expand="md sticky-top  glass p-1 rounded-0">
+    <Navbar
+      expand="md"
+      sticky="top"
+      variant="light"
+      className="p-1 rounded-0 glass"
+      collapseOnSelect
+    >
       <Container>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
@@ -20,7 +26,7 @@ function Header() {
               Projects
             </Nav.Link>
             <Nav.Link href="#contact" className=" text-white">
-              Contect
+              Contact
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

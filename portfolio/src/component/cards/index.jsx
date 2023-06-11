@@ -13,11 +13,10 @@ function Cards() {
 
   // The useEffect will run once when the component first mounts
   useEffect(() => {
-    setHasError(false);
-    setIsLoading(true);
-
     async function getData() {
       try {
+        setHasError(false);
+        setIsLoading(true);
         const response = await fetch(url);
         const json = await response.json();
 
@@ -41,8 +40,6 @@ function Cards() {
     <dir>Oops! Something went wrong.</dir>;
   }
 
-  console.log(cards);
-
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -64,7 +61,7 @@ function Cards() {
       <LayoutGroup>
         <motion.div className="d-flex justify-content-center align-items-start gap-3 flex-wrap flex-30">
           {cards.map((card) => (
-            <div>
+            <div key={card.acf.id}>
               <Card card={card} />
             </div>
           ))}

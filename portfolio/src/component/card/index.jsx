@@ -157,7 +157,7 @@ function Card({ card: { acf } }) {
             <hr />
             <motion.div className="d-flex gap-2 mt-auto">
               <motion.a
-                className="btn btn-outline-secondary fs-5 text-white mt-3"
+                className="btn btn-outline-primary fs-5 text-white mt-3"
                 href={liveDemo}
                 animate={{ x: 0, opacity: 1 }}
                 initial={{ x: 50, opacity: 0 }}
@@ -170,7 +170,7 @@ function Card({ card: { acf } }) {
                 initial={{ x: 50, opacity: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
                 href={githubUrl}
-                className="btn btn-outline-secondary fs-5 text-white mt-3"
+                className="btn btn-outline-primary fs-5 text-white mt-3"
               >
                 {" "}
                 Github repo
