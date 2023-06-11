@@ -17,7 +17,6 @@ function Cards() {
         setIsLoading(true);
         const response = await fetch(url);
         const json = await response.json();
-        console.log(json);
         setCard(json);
         setIsLoading(false);
       } catch (error) {
