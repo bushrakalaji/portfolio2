@@ -60,18 +60,17 @@ function HomePage() {
           </div>
         </motion.div>
       </Section>
-
       <Section className="position-relative m-5">
         <span id="about"></span>
         <AboutMe />
+      </Section>{" "}
+      <Section className="position-relative">
+        <span id="contact"></span>
+        <Contact />
       </Section>
       <Section className="position-relative">
         <span id="projects"></span>
         <Cards />
-      </Section>
-      <Section className="position-relative">
-        <span id="contact"></span>
-        <Contact />
       </Section>
     </div>
   );
